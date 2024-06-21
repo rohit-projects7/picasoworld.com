@@ -1,7 +1,7 @@
 :root {
     font-family: 'lora', sans-serif;
     min-height: 100vh;
-    max-width: 1280vh;
+    max-width: auto;
     background-color: white;
     margin: 0 auto;
 
@@ -56,18 +56,18 @@ nav ul {
     flex-wrap: wrap;
     justify-content: flex-start;
     list-style: none;
+    align-items: center;
 }
 
 nav ul li {
     color: white;
-    padding: 22px 40px;
+    padding: 4px 25px;
     background-color: #333333;
-    border-radius: 8px;
-
+    /* border-radius: 8px; */
 }
 
 nav ul li:hover {
-    background-color: #222222;
+    /* background-color: #222222; */
 }
 
 .active {
@@ -77,6 +77,27 @@ nav ul li:hover {
 nav ul li a {
     color: white;
     text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav ul li a::after{
+    content:"";
+    border-bottom: 2px solid white;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    transition: all 0.5s linear;
+
+}
+
+nav ul li a:hover::after{
+
+    width: 100%;
+
 }
 
 /*  tablets */
@@ -151,7 +172,7 @@ nav ul li a {
     font-weight: bold;
     font-size: 3em;
     position: relative;
-    animation: appear 0.5s ease-in-out 0s forwards;
+    animation: appear 1s ease-in-out 0s forwards;
 
 }
 
@@ -166,9 +187,6 @@ nav ul li a {
 
 .subtext {
     display: flex;
-    /* flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap; */
 }
 
 
@@ -219,7 +237,7 @@ nav ul li a {
 
 h3.title {
     font-size: 24px;
-    padding: 12;
+    padding: 12px 0px;
     margin: 6px;
     border-top: 5px solid #ddd;
     border-bottom: 5px solid #ddd;
@@ -289,21 +307,22 @@ h3.title {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
-    grid-template-rows: repeat(2 1fr);
-    grid-gap: 8px;
-    padding: 12px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 6px;
+    padding: 8px;
+    justify-content: center;
    
 }
 
 .gallery-item {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     transition: all 0.25s ease-in-out;
 }
 
 .gallery-item:hover{
-    /* transform: scale(0,95); */
+    transform:scale( 280px);
     opacity: 0.5;
 }
 
@@ -314,7 +333,6 @@ h3.title {
     background-color: #f2f2f2;
     padding: 20px;
     margin: 10px 0px;
-   /* min-height: 100vw; */
 }
 
 .container form {
@@ -354,7 +372,6 @@ input[type=submit]:hover{
 
 .container .map {
     padding: 12px;
-    /* margin-left: 20px; */
     flex: 1;
 }
 
