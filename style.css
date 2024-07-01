@@ -62,17 +62,17 @@ nav ul {
 nav ul li {
     color: white;
     padding: 4px 25px;
-    background-color: #333333;
-    /* border-radius: 8px; */
+    /* background-color: #333333; */
+    border-radius: 8px;
 }
 
 nav ul li:hover {
-    /* background-color: #222222; */
-}
-
-.active {
     background-color: #222222;
 }
+
+/* .active {
+    background-color: #222222;
+} */
 
 nav ul li a {
     color: white;
