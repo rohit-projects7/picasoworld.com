@@ -366,9 +366,33 @@ input[type=submit] {
     padding: 12px 20px;
 }
 
+
+@keyframes shake {
+
+
+    0% {
+        transform: rotate(25deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
 input[type=submit]:hover{
     background-color: green;
+    animation: shake 500ms linear 2;
 }
+
 
 .container .map {
     padding: 12px;
